@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour {
 	
 	private int positionChange = 1;
 	private Vector3? targetPosition = null;
-
+    private Vector3 startPosition;
 	// Use this for initialization
 	void Start () {
 		this.positionChange = (InvertMovement) ? -1 : 1;
@@ -26,6 +26,11 @@ public class PlayerMove : MonoBehaviour {
 				targetPosition = new Vector3 (this.transform.position.x, this.transform.position.y + this.positionChange, 0);
 			else if (Input.GetAxis ("Vertical") < 0)
 				targetPosition = new Vector3 (this.transform.position.x, this.transform.position.y - this.positionChange, 0);
+
+            if (targetPosition.HasValue)
+            {
+                startPosition = this.transform.position;
+            }
 		}
 
 		if (targetPosition != null) {
@@ -34,4 +39,9 @@ public class PlayerMove : MonoBehaviour {
 				targetPosition = null;
 		}
 	}
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        targetPosition = startPosition;
+    }
 }
