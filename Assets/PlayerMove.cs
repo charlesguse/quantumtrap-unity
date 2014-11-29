@@ -5,6 +5,12 @@ public class PlayerMove : MonoBehaviour {
 
 	public float Velocity = 1.0f;
 	public bool InvertMovement = false;
+
+	public bool IsMoving {
+		get {
+			return targetPosition.HasValue;
+		}
+	}
 	
 	private int positionChange = 1;
 	private Vector3? targetPosition = null;
