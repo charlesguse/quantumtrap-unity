@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour {
 			return targetPosition.HasValue;
 		}
 	}
-	
+
 	private int positionChange = 1;
 	private Vector3? targetPosition = null;
     private Vector3 startPosition;
@@ -23,6 +23,7 @@ public class PlayerMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (targetPosition == null) {
+            Debug.Log(this.transform.position);
 			if (Input.GetAxis ("Horizontal") > 0)
 				targetPosition = new Vector3 (this.transform.position.x + this.positionChange, this.transform.position.y, 0);
 			else if (Input.GetAxis ("Horizontal") < 0)
@@ -42,7 +43,12 @@ public class PlayerMove : MonoBehaviour {
 		if (targetPosition != null) {
 			this.transform.position = Vector3.MoveTowards(this.transform.position, targetPosition.Value, this.Velocity*Time.deltaTime);
 			if (this.transform.position == targetPosition.Value)
-				targetPosition = null;
+            {
+                targetPosition = null;
+                this.transform.position =new Vector3(Mathf.Round(this.transform.position.x), 
+                                                       Mathf.Round(this.transform.position.y),
+                                                       Mathf.Round(this.transform.position.z));
+            }
 		}
 	}
 
