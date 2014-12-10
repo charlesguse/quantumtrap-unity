@@ -213,6 +213,7 @@ GameObject:
   - 50: {fileID: 57265069}
   - 82: {fileID: 57265072}
   - 114: {fileID: 57265071}
+  - 114: {fileID: 57265073}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -231,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6bba80262988504488c13d715a6d2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocity: 1
+  Velocity: 2
   InvertMovement: 0
 --- !u!212 &57265066
 SpriteRenderer:
@@ -375,6 +376,20 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &57265073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 57265064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18c00b84a737e144aca399c3116daef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextLevel: Title
+  GoalObject: {fileID: 506426820}
+  WinSound: {fileID: 8300000, guid: edcabdd23e625d54c88db138e6a012f1, type: 3}
 --- !u!1 &71780018
 GameObject:
   m_ObjectHideFlags: 0
