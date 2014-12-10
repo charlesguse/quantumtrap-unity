@@ -1,25 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//[RequireComponent  (typeof(PlayerMove))]
 public class WinCondition : MonoBehaviour {
 	public string NextLevel;
 	public GameObject GoalObject;
 	public AudioClip WinSound;
 
-	private PlayerMove playerObject;
+	private PlayerMove playerMove;
 	private bool won;
 
 	// Use this for initialization
 	void Start () {
 		won = false;
-		playerObject = (PlayerMove)this.GetComponent<PlayerMove>();
+		playerMove = (PlayerMove)this.GetComponent<PlayerMove>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (!won && playerObject.transform.position == GoalObject.transform.position && !playerObject.IsMoving) {
+		if (!won && transform.position == GoalObject.transform.position && !playerMove.IsMoving) {
 			won = true;
-			Destroy(playerObject);
+			Destroy(playerMove);
 			StartCoroutine(TriggerWin());
 		}
 	}
