@@ -23,7 +23,6 @@ public class PlayerMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (targetPosition == null) {
-            Debug.Log(this.transform.position);
 			if (Input.GetAxis ("Horizontal") > 0)
 				targetPosition = new Vector3 (this.transform.position.x + this.positionChange, this.transform.position.y, 0);
 			else if (Input.GetAxis ("Horizontal") < 0)
