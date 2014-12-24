@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Velocity: 2
   InvertMovement: 0
+  PlayerMovingSound: {fileID: 8300000, guid: 7f44c8ab18b106b49b8d78b675d79585, type: 3}
 --- !u!212 &57265066
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7230,7 +7231,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.54351616
+  orthographic size: 8.52782059
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
