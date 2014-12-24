@@ -5,6 +5,7 @@ public class PlayerMove : MonoBehaviour {
 
 	public float Velocity = 1.0f;
 	public bool InvertMovement = false;
+	public AudioClip PlayerMovingSound;
 
 	public bool IsMoving {
 		get {
@@ -36,6 +37,7 @@ public class PlayerMove : MonoBehaviour {
             if (targetPosition.HasValue)
             {
                 startPosition = this.transform.position;
+				audio.PlayOneShot(PlayerMovingSound);
             }
 		}
 
