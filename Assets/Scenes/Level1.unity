@@ -268,7 +268,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!58 &57265068
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18c00b84a737e144aca399c3116daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: Title
+  NextLevel: Level2-Intro
   GoalObject: {fileID: 506426820}
   WinSound: {fileID: 8300000, guid: edcabdd23e625d54c88db138e6a012f1, type: 3}
 --- !u!1 &71780018
@@ -2316,7 +2316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!50 &506426824
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2861,7 +2861,7 @@ GameObject:
   - 4: {fileID: 642876577}
   - 82: {fileID: 642876578}
   m_Layer: 0
-  m_Name: Gameplay Music
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2877,8 +2877,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2116035678}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!82 &642876578
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4752,7 +4752,7 @@ Transform:
   - {fileID: 350319412}
   - {fileID: 2096152734}
   m_Father: {fileID: 2116035678}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!1 &1036606234
 GameObject:
   m_ObjectHideFlags: 0
@@ -7225,13 +7225,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: .939999998
+    width: 1
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.52782059
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7253,7 +7253,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2116035678}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &1916251180
 GameObject:
@@ -7761,7 +7761,7 @@ GameObject:
   - 4: {fileID: 2116035678}
   - 212: {fileID: 2116035677}
   m_Layer: 0
-  m_Name: level-1-background
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7796,14 +7796,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116035676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1899707771}
-  - {fileID: 642876577}
   - {fileID: 1030456246}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &2131504235
 GameObject:
   m_ObjectHideFlags: 0
