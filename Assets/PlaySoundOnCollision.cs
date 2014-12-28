@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class PlaySoundOnCollision : MonoBehaviour {
-
-    public AudioClip Sound;
-
-    void OnCollisionEnter2D(Collision2D col)
+namespace Player
+{
+    public class PlaySoundOnCollision : MonoBehaviour
     {
-        audio.PlayOneShot(Sound);
+
+        public AudioClip Sound;
+
+        // ReSharper disable once UnusedMember.Local
+        // ReSharper disable once UnusedParameter.Local
+        void OnCollisionEnter2D(Collision2D col)
+        {
+            audio.PlayOneShot(Sound);
+        }
     }
 }

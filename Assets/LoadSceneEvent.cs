@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 
-public class LoadSceneEvent : MonoBehaviour {
+// ReSharper disable once CheckNamespace
+namespace Scene
+{
+    public class LoadSceneEvent : MonoBehaviour
+    {
 
-	public void LoadScene (string name)
-	{
-		Application.LoadLevel (name);
-	}
+        public void LoadScene(string sceneName)
+        {
+            Application.LoadLevel(sceneName);
+        }
+    }
 }
