@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// ReSharper disable once CheckNamespace
 namespace Player
 {
     public class PlaySoundOnCollision : MonoBehaviour
