@@ -1,33 +1,34 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-//[RequireComponent  (typeof(PlayerMove))]
 // ReSharper disable once CheckNamespace
 namespace Player
 {
+    [RequireComponent(typeof(Movement))]
     public class WinCondition : MonoBehaviour
     {
         public string NextLevel;
-        public GameObject GoalObject;
+        public GameObject GoalObject1;
+        public GameObject GoalObject2;
         public AudioClip WinSound;
 
-        private PlayerMove _playerMove;
+        private Movement _movement;
         private bool _won;
 
         // ReSharper disable once UnusedMember.Local
         void Start()
         {
             _won = false;
-            _playerMove = GetComponent<PlayerMove>();
+            _movement = GetComponent<Movement>();
         }
 
         // ReSharper disable once UnusedMember.Local
         void Update()
         {
-            if (!_won && transform.position == GoalObject.transform.position && !_playerMove.IsMoving)
+            if (!_won && GoalObject1.transform.position == GoalObject2.transform.position && !_movement.IsMoving)
             {
                 _won = true;
-                Destroy(_playerMove);
+                //Destroy(_movement);
                 StartCoroutine(TriggerWin());
             }
         }
