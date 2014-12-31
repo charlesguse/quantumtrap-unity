@@ -1013,8 +1013,6 @@ GameObject:
   - 58: {fileID: 57265068}
   - 50: {fileID: 57265069}
   - 82: {fileID: 57265072}
-  - 114: {fileID: 57265071}
-  - 114: {fileID: 57265065}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1022,18 +1020,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &57265065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11469678, guid: 9406261f90c909f42b0ac7bb340e2b55,
-    type: 2}
-  m_PrefabInternal: {fileID: 1662573389}
-  m_GameObject: {fileID: 57265064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347ac19539daea94f9b884a32fc93541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &57265066
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1110,18 +1096,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToIgnore: {fileID: 506426820}
---- !u!114 &57265071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11469674, guid: 9406261f90c909f42b0ac7bb340e2b55,
-    type: 2}
-  m_PrefabInternal: {fileID: 1662573389}
-  m_GameObject: {fileID: 57265064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3512403f982af294aab850c9d9bfe5d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &57265072
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7075,7 +7049,6 @@ GameObject:
   - 114: {fileID: 506426826}
   - 58: {fileID: 506426825}
   - 50: {fileID: 506426824}
-  - 114: {fileID: 506426827}
   m_Layer: 0
   m_Name: Lepton
   m_TagString: Finish
@@ -7159,18 +7132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToIgnore: {fileID: 57265064}
---- !u!114 &506426827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11413882, guid: 89a61dc74ecf1944c9dc40a57d8e9df1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1761416750}
-  m_GameObject: {fileID: 506426820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347ac19539daea94f9b884a32fc93541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &512563826
 Prefab:
   m_ObjectHideFlags: 0
@@ -10403,7 +10364,7 @@ GameObject:
   - 114: {fileID: 746231456}
   - 82: {fileID: 746231459}
   m_Layer: 0
-  m_Name: GlobalScripts
+  m_Name: GameSceneScripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18307,6 +18268,10 @@ Prefab:
     - target: {fileID: 144180, guid: a7d7bad3e708d6c4a9313ad1b8ddcd2c, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444180, guid: a7d7bad3e708d6c4a9313ad1b8ddcd2c, type: 2}
+      propertyPath: NextLevel
+      value: Level2-Intro
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7d7bad3e708d6c4a9313ad1b8ddcd2c, type: 2}
