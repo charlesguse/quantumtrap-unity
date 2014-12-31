@@ -11,7 +11,7 @@ namespace Player
         void Start()
         {
             if (_movement == null)
-                _movement = GameObject.Find("GlobalScripts").GetComponent<Movement>();
+                _movement = GameObject.Find("GameSceneScripts").GetComponent<Movement>();
         }
 
         // ReSharper disable once UnusedMember.Local
