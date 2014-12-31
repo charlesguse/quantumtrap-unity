@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 // ReSharper disable once CheckNamespace
 namespace Scene
 {
+    [Obsolete("Only kept to see how event triggers work. Do not use this in the game.")]
     public class CanvasHelper : EventTrigger
     {
         private const float MaxSize = 1.2f;
