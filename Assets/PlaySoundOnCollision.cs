@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 
 // ReSharper disable once CheckNamespace
-namespace Player
+namespace Audio
 {
     public class PlaySoundOnCollision : MonoBehaviour
     {
 
-        public AudioClip Sound;
+        //public AudioClip Sound;
 
         // ReSharper disable once UnusedMember.Local
-        // ReSharper disable once UnusedParameter.Local
         void OnCollisionEnter2D(Collision2D col)
         {
-            audio.PlayOneShot(Sound);
+            if (col.gameObject.name == "Player" && !audio.isPlaying)
+                audio.Play();
+
+            //audio.PlayOneShot(Sound);
         }
     }
 }

@@ -3,22 +3,23 @@
 // ReSharper disable once CheckNamespace
 namespace Player
 {
-    public class HandleCollisionWithNonPlayer : MonoBehaviour
+    public class PreventMovementOnBlockCollision : MonoBehaviour
     {
-        private Movement _movement;
+        private static Movement _movement;
 
         // ReSharper disable once UnusedMember.Local
         void Start()
         {
-            _movement = GameObject.Find("GlobalScripts").GetComponent<Movement>();
+            if (_movement == null)
+                _movement = GameObject.Find("GlobalScripts").GetComponent<Movement>();
         }
 
         // ReSharper disable once UnusedMember.Local
         void OnCollisionEnter2D(Collision2D col)
         {
-            if (name == "Player")
+            if (col.gameObject.name == "Player")
                 _movement.OnPlayerCollisionEnter2D(col);
-            else if (name == "Lepton")
+            else if (col.gameObject.name == "Lepton")
                 _movement.OnLeptonCollisionEnter2D(col);
         }
     }
