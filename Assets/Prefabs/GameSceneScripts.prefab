@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18c00b84a737e144aca399c3116daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: Level2-Intro
+  NextLevel: 
   GoalObject1: {fileID: 0}
   GoalObject2: {fileID: 0}
   WinSound: {fileID: 8300000, guid: edcabdd23e625d54c88db138e6a012f1, type: 3}
