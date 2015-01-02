@@ -93,12 +93,9 @@ namespace Player
             return new Vector3(
                 (float)Math.Round(value.x, digits), 
                 (float)Math.Round(value.y, digits), 
-                (float)Math.Round(value.z, digits)
-                );
+                (float)Math.Round(value.z, digits));
         }
 
-        // ReSharper disable once UnusedMember.Local
-        // ReSharper disable once UnusedParameter.Local
         public void OnPlayerCollisionEnter2D(Collision2D col)
         {
             _playerTargetPosition = _playerStartPosition;
