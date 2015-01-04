@@ -8,6 +8,7 @@ namespace Player
     public class ChangeColor : MonoBehaviour
     {
         private Sprite _white;
+        public AudioClip ChangeColorSound;
         public Sprite Blue;
         public Sprite Red;
         public Sprite Yellow;
@@ -50,7 +51,10 @@ namespace Player
                 DecrementColor();
 
             if (previousColor != CurrentColor)
+            { 
+                audio.PlayOneShot(ChangeColorSound);
                 BlockTransition.Transition(CurrentColor);
+            }
         }
 
         private void IncrementColor()
