@@ -4,7 +4,6 @@ using UnityEngine;
 // ReSharper disable once CheckNamespace
 namespace Player
 {
-    [RequireComponent(typeof(Movement))]
     public class WinCondition : MonoBehaviour
     {
         public string NextLevel;

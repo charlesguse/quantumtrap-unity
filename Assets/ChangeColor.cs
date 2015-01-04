@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using Assets;
 using UnityEngine;
 
 // ReSharper disable once CheckNamespace
 namespace Player
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     public class ChangeColor : MonoBehaviour
     {
         private Sprite _white;
@@ -43,10 +43,14 @@ namespace Player
         // ReSharper disable once UnusedMember.Local
         private void Update()
         {
+            var previousColor = CurrentColor;
             if (Input.GetButtonUp("Jump") || Input.GetButtonUp("Fire1") || Input.GetKeyUp(KeyCode.E))
                 IncrementColor();
             else if (Input.GetButtonUp("Fire2") || Input.GetKeyUp(KeyCode.Q))
                 DecrementColor();
+
+            if (previousColor != CurrentColor)
+                BlockTransition.Transition(CurrentColor);
         }
 
         private void IncrementColor()
