@@ -20,27 +20,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &110114468
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110212878}
-  m_DstState: {fileID: 110261124}
-  m_TransitionDuration: .25
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
-    m_ExitTime: .75
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
---- !u!1101 &110117770
+--- !u!1101 &110118454
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
@@ -48,6 +28,26 @@ Transition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_SrcState: {fileID: 110211850}
+  m_DstState: {fileID: 110261124}
+  m_TransitionDuration: .5
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: .5
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110177476
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110212878}
   m_DstState: {fileID: 110269304}
   m_TransitionDuration: .5
   m_TransitionOffset: 0
@@ -65,13 +65,13 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Fade Out
+  m_Name: Fade In
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: cd9842950e1958b42a9d818b2e3433d3, type: 2}
   m_ParentStateMachine: {fileID: 110722304}
-  m_Position: {x: 516, y: -24, z: 0}
+  m_Position: {x: 516, y: -96, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -80,13 +80,13 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Fade In
-  m_Speed: -1
+  m_Name: Fade Out
+  m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: b3c5cb6328b18524a9287bb606d5deab, type: 2}
   m_ParentStateMachine: {fileID: 110722304}
-  m_Position: {x: 516, y: -96, z: 0}
+  m_Position: {x: 516, y: -24, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -139,14 +139,14 @@ StateMachine:
     data:
       first: {fileID: 110211850}
       second:
-      - {fileID: 110117770}
+      - {fileID: 110118454}
     data:
       first: {fileID: 0}
       second: []
     data:
       first: {fileID: 110212878}
       second:
-      - {fileID: 110114468}
+      - {fileID: 110177476}
     data:
       first: {fileID: 110269304}
       second: []
