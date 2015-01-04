@@ -8,14 +8,14 @@ namespace Player
         private static Movement _movement;
 
         // ReSharper disable once UnusedMember.Local
-        void Start()
+        private void Start()
         {
             if (_movement == null)
                 _movement = GameObject.Find("GameSceneScripts").GetComponent<Movement>();
         }
 
         // ReSharper disable once UnusedMember.Local
-        void OnCollisionEnter2D(Collision2D col)
+        private void OnCollisionEnter2D(Collision2D col)
         {
             if (col.gameObject.name == "Player")
                 _movement.OnPlayerCollisionEnter2D(col);
