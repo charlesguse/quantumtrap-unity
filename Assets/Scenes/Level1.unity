@@ -1081,6 +1081,7 @@ GameObject:
   - 58: {fileID: 57265068}
   - 50: {fileID: 57265069}
   - 82: {fileID: 57265072}
+  - 114: {fileID: 57265065}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1088,6 +1089,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &57265065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11450828, guid: 9406261f90c909f42b0ac7bb340e2b55,
+    type: 2}
+  m_PrefabInternal: {fileID: 1662573389}
+  m_GameObject: {fileID: 57265064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a2300795497964ea009d7c7a9f990d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangeColorSound: {fileID: 8300000, guid: f0014641d70254d44a0a1c89dfe74516, type: 3}
+  Blue: {fileID: 0}
+  Red: {fileID: 0}
+  Yellow: {fileID: 0}
+  Green: {fileID: 0}
 --- !u!212 &57265066
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21850,7 +21868,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .220588207, g: .220588207, b: .220588207, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -21858,10 +21876,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 1000.01001
+  far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.5
+  orthographic size: 5.61999989
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
