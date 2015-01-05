@@ -77,8 +77,8 @@ namespace Assets
 
         private void TransitionToImpassable()
         {
-            if (_player.transform.position != transform.position
-                && _lepton.transform.position != transform.position)
+            if (!_player.collider2D.bounds.Intersects(collider2D.bounds)
+                && !_lepton.collider2D.bounds.Intersects(collider2D.bounds))
             {
                 _animator.Play("Fade In");
                 _passable = false;
