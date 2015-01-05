@@ -19,12 +19,14 @@ namespace Player
         private int _colorIndex;
 
         private SpriteRenderer _renderer;
+        private Movement _movement;
 
         // ReSharper disable once UnusedMember.Local
         private void Start()
         {
             _renderer = GetComponent<SpriteRenderer>();
             _white = _renderer.sprite;
+            _movement = GameObject.Find("GameSceneScripts").GetComponent<Movement>();
 
             _colorIndex = 0;
             var list = new List<CharacterColor> { CharacterColor.White };
@@ -45,15 +47,19 @@ namespace Player
         private void Update()
         {
             var previousColor = CurrentColor;
-            if (Input.GetButtonUp("Jump") || Input.GetButtonUp("Fire1") || Input.GetKeyUp(KeyCode.E))
-                IncrementColor();
-            else if (Input.GetButtonUp("Fire2") || Input.GetKeyUp(KeyCode.Q))
-                DecrementColor();
 
-            if (previousColor != CurrentColor)
-            { 
-                audio.PlayOneShot(ChangeColorSound);
-                BlockTransition.Transition(CurrentColor);
+            if (!_movement.IsMoving)
+            {
+                if (Input.GetButtonUp("Jump") || Input.GetButtonUp("Fire1") || Input.GetKeyUp(KeyCode.E))
+                    IncrementColor();
+                else if (Input.GetButtonUp("Fire2") || Input.GetKeyUp(KeyCode.Q))
+                    DecrementColor();
+
+                if (previousColor != CurrentColor)
+                {
+                    audio.PlayOneShot(ChangeColorSound);
+                    BlockTransition.Transition(CurrentColor);
+                }
             }
         }
 
