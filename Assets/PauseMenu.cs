@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 // ReSharper disable once CheckNamespace
@@ -11,7 +9,7 @@ namespace Scene
     {
         public GameObject FirstSelected;
 
-        private static bool IsPaused { get; set; }
+        private bool _isPaused;
         private GameObject _pauseOverlayCanvas;
         private float _previousTimeScale;
         private float _previousFixedDeltaTime;
@@ -28,12 +26,12 @@ namespace Scene
         private void Update()
         {
             //pause the game on escape key press and when the game is not already paused
-            if (Input.GetKeyUp(KeyCode.Escape) && !IsPaused)
+            if (Input.GetKeyUp(KeyCode.Escape) && !_isPaused)
             {
                 PauseGame();
             }
             //unpause the game if its paused and the escape key is pressed
-            else if (Input.GetKeyUp(KeyCode.Escape) && IsPaused)
+            else if (Input.GetKeyUp(KeyCode.Escape) && _isPaused)
             {
                 UnpauseGame();
             }
@@ -42,9 +40,9 @@ namespace Scene
         //function to pause the game
         public void PauseGame()
         {
-            if (!IsPaused)
+            if (!_isPaused)
             {
-                IsPaused = true;
+                _isPaused = true;
                 PauseAllSound();
                 PauseTime();
                 ShowPauseScreen();
@@ -54,9 +52,9 @@ namespace Scene
 
         public void UnpauseGame()
         {
-            if (IsPaused)
+            if (_isPaused)
             {
-                IsPaused = false;
+                _isPaused = false;
                 UnpauseAllSound();
                 UnpauseTime();
                 HidePauseScreen();

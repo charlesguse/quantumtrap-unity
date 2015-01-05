@@ -8,6 +8,7 @@ namespace Assets
 {
     public class BlockTransition : MonoBehaviour
     {
+        private static string _sceneName;
         private static readonly List<BlockTransition> Blocks = new List<BlockTransition>();
         private static Movement _movement;
         private static GameObject _player;
@@ -18,8 +19,13 @@ namespace Assets
         private bool _passable;
 
         // ReSharper disable once UnusedMember.Local
-        void Start()
+        private void Start()
         {
+            if (_sceneName == null || _sceneName != Application.loadedLevelName)
+            {
+                _sceneName = Application.loadedLevelName;
+                ResetStaticVariables();
+            }
             if (_movement == null)
                 _movement = GameObject.Find("GameSceneScripts").GetComponent<Movement>();
             if (_player == null)
@@ -31,6 +37,14 @@ namespace Assets
 
             Blocks.Add(this);
             _animator = GetComponent<Animator>();
+        }
+
+        private void ResetStaticVariables()
+        {
+            Blocks.Clear();
+            _movement = null;
+            _player = null;
+            _lepton = null;
         }
 
         CharacterColor ParseColor(Sprite sprite)
