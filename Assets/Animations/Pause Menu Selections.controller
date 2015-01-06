@@ -481,14 +481,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 122
-        inSlope: 90
-        outSlope: 90
+        value: 239
+        inSlope: 176.099976
+        outSlope: 176.099976
         tangentMode: 10
       - time: 1
-        value: 212
-        inSlope: 90
-        outSlope: 90
+        value: 415.099976
+        inSlope: 176.099976
+        outSlope: 176.099976
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -608,14 +608,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 122
-        inSlope: 90
-        outSlope: 90
+        value: 239
+        inSlope: 176.099976
+        outSlope: 176.099976
         tangentMode: 10
       - time: 1
-        value: 212
-        inSlope: 90
-        outSlope: 90
+        value: 415.099976
+        inSlope: 176.099976
+        outSlope: 176.099976
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -855,10 +855,10 @@ StateMachine:
       - {fileID: 110176272}
       - {fileID: 110176266}
     data:
-      first: {fileID: 110276266}
+      first: {fileID: 110276272}
       second: []
     data:
-      first: {fileID: 110276272}
+      first: {fileID: 110276266}
       second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
