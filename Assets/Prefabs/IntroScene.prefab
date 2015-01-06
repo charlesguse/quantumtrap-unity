@@ -11,7 +11,6 @@ GameObject:
   - 20: {fileID: 2044222}
   - 124: {fileID: 12444222}
   - 92: {fileID: 9244222}
-  - 81: {fileID: 8144222}
   m_Layer: 0
   m_Name: ScaledResolutionCamera
   m_TagString: Untagged
@@ -324,13 +323,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!81 &8144222
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144222}
-  m_Enabled: 1
 --- !u!81 &8196960
 AudioListener:
   m_ObjectHideFlags: 1
