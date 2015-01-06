@@ -8,7 +8,6 @@ namespace Assets
 {
     public class BlockTransition : MonoBehaviour
     {
-        private static string _sceneName;
         private static readonly List<BlockTransition> Blocks = new List<BlockTransition>();
         private static Movement _movement;
         private static GameObject _player;
@@ -18,14 +17,17 @@ namespace Assets
         private Animator _animator;
         private bool _passable;
 
+
+        // ReSharper disable once UnusedMember.Local
+        // ReSharper disable once UnusedParameter.Local
+        private void OnLevelWasLoaded(int level)
+        {
+            ResetStaticVariables();
+        }
+
         // ReSharper disable once UnusedMember.Local
         private void Start()
         {
-            if (_sceneName == null || _sceneName != Application.loadedLevelName)
-            {
-                _sceneName = Application.loadedLevelName;
-                ResetStaticVariables();
-            }
             if (_movement == null)
                 _movement = GameObject.Find("GameSceneScripts").GetComponent<Movement>();
             if (_player == null)
