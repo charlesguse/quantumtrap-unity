@@ -135,7 +135,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1303538400}
   m_Father: {fileID: 632425587}
   m_RootOrder: 0
 --- !u!20 &657508790
@@ -272,7 +273,7 @@ GameObject:
   - 114: {fileID: 843333534}
   - 95: {fileID: 843333533}
   m_Layer: 5
-  m_Name: Start Level
+  m_Name: Option 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,6 +473,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1743be84982c54997861408574d216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1303538399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 144222, guid: 23045ade1e0f422439792fd59487669e, type: 2}
+  m_PrefabInternal: {fileID: 2078795877}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1303538400}
+  - 20: {fileID: 1303538404}
+  - 124: {fileID: 1303538403}
+  - 92: {fileID: 1303538402}
+  - 81: {fileID: 1303538401}
+  m_Layer: 0
+  m_Name: ScaledResolutionCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1303538400
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 444222, guid: 23045ade1e0f422439792fd59487669e, type: 2}
+  m_PrefabInternal: {fileID: 2078795877}
+  m_GameObject: {fileID: 1303538399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 657508789}
+  m_RootOrder: 0
+--- !u!81 &1303538401
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8144222, guid: 23045ade1e0f422439792fd59487669e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2078795877}
+  m_GameObject: {fileID: 1303538399}
+  m_Enabled: 1
+--- !u!92 &1303538402
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9244222, guid: 23045ade1e0f422439792fd59487669e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2078795877}
+  m_GameObject: {fileID: 1303538399}
+  m_Enabled: 1
+--- !u!124 &1303538403
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12444222, guid: 23045ade1e0f422439792fd59487669e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2078795877}
+  m_GameObject: {fileID: 1303538399}
+  m_Enabled: 1
+--- !u!20 &1303538404
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2044222, guid: 23045ade1e0f422439792fd59487669e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2078795877}
+  m_GameObject: {fileID: 1303538399}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: .219607845, g: .219607845, b: .219607845, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -2
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!1 &1428178294
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +575,7 @@ GameObject:
   - 114: {fileID: 1428178297}
   - 95: {fileID: 1428178296}
   m_Layer: 5
-  m_Name: Main Menu
+  m_Name: Option 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,7 +845,7 @@ GameObject:
   - 114: {fileID: 1894523860}
   - 95: {fileID: 1894523859}
   m_Layer: 5
-  m_Name: Retry Level
+  m_Name: Option 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1051,6 +1140,18 @@ Prefab:
     - target: {fileID: 11496970, guid: 23045ade1e0f422439792fd59487669e, type: 2}
       propertyPath: delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 196966, guid: 23045ade1e0f422439792fd59487669e, type: 2}
+      propertyPath: m_Name
+      value: Option 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 196970, guid: 23045ade1e0f422439792fd59487669e, type: 2}
+      propertyPath: m_Name
+      value: Option 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 196976, guid: 23045ade1e0f422439792fd59487669e, type: 2}
+      propertyPath: m_Name
+      value: Option 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23045ade1e0f422439792fd59487669e, type: 2}

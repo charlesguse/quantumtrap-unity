@@ -7781,7 +7781,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!82 &746231459
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8183,6 +8183,85 @@ Prefab:
   m_RootGameObject: {fileID: 832928061}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &827929300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 178064, guid: 7e056ce6ca2cd514cba43bd0fb1a3b42, type: 2}
+  m_PrefabInternal: {fileID: 1443377963}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 827929302}
+  - 20: {fileID: 827929301}
+  - 124: {fileID: 827929305}
+  - 92: {fileID: 827929304}
+  m_Layer: 0
+  m_Name: ScaledResolutionCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &827929301
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2078064, guid: 7e056ce6ca2cd514cba43bd0fb1a3b42,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443377963}
+  m_GameObject: {fileID: 827929300}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: .219607845, g: .219607845, b: .219607845, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -2
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!4 &827929302
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 478064, guid: 7e056ce6ca2cd514cba43bd0fb1a3b42, type: 2}
+  m_PrefabInternal: {fileID: 1443377963}
+  m_GameObject: {fileID: 827929300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1584834537}
+  m_RootOrder: 0
+--- !u!92 &827929304
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9278064, guid: 7e056ce6ca2cd514cba43bd0fb1a3b42,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443377963}
+  m_GameObject: {fileID: 827929300}
+  m_Enabled: 1
+--- !u!124 &827929305
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12478064, guid: 7e056ce6ca2cd514cba43bd0fb1a3b42,
+    type: 2}
+  m_PrefabInternal: {fileID: 1443377963}
+  m_GameObject: {fileID: 827929300}
+  m_Enabled: 1
 --- !u!1001 &831474142
 Prefab:
   m_ObjectHideFlags: 0
@@ -10489,7 +10568,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2, y: -14}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1085646100
 MonoBehaviour:
@@ -17702,7 +17781,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 827929302}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1001 &1589342218
@@ -17742,7 +17822,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444180, guid: a7d7bad3e708d6c4a9313ad1b8ddcd2c, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11444180, guid: a7d7bad3e708d6c4a9313ad1b8ddcd2c, type: 2}
       propertyPath: GoalObject1
@@ -18382,7 +18462,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469678, guid: 9406261f90c909f42b0ac7bb340e2b55, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11469676, guid: 9406261f90c909f42b0ac7bb340e2b55, type: 2}
       propertyPath: ObjectToIgnore
@@ -18801,7 +18881,7 @@ Transform:
   - {fileID: 235508062}
   - {fileID: 1859914034}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &1673979476
 Prefab:
   m_ObjectHideFlags: 0
@@ -19931,7 +20011,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413880, guid: 89a61dc74ecf1944c9dc40a57d8e9df1, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11413880, guid: 89a61dc74ecf1944c9dc40a57d8e9df1, type: 2}
       propertyPath: ObjectToIgnore
